@@ -13,16 +13,16 @@
 - No afirmes haber ejecutado o probado algo que no ejecutaste. Indica qué corriste y el resultado.
 - Texto de UI siempre vía i18n; comentarios en código solo si aportan.
 
-## Estado actual: FASE 0 — Decisiones (no hay código de producto todavía)
-1. Al empezar, lee `docs/DECISIONS.md` y `docs/02-PREGUNTAS.md`.
-2. Preguntas 🔴 sin responder → pregúntalas a Jorge (máx. 4 por tanda con AskUserQuestion, opción recomendada primero) y anótalas en `DECISIONS.md`.
-3. No escribas código de producto con 🔴 abiertas. Permitido: spikes desechables en `/spikes`.
-4. Con las 🔴 cerradas → Sprint 0 de `docs/01-PLAN.md`. Presenta el plan del sprint antes de implementar.
+## Estado actual: Sprint 0 hecho (esqueleto técnico) — siguiente: S1
+1. Al empezar, lee `docs/DECISIONS.md` y `docs/02-PREGUNTAS.md`. Cómo compilar/testear: `README.md`.
+2. S1 no arranca hasta completar M0 (validación con comercios, D-002). Preguntas 🟡/🔴 sin responder → pregúntalas a Jorge (máx. 4 por tanda con AskUserQuestion, opción recomendada primero) y anótalas en `DECISIONS.md`.
+3. Antes de cada sprint, presenta su plan (pasos, riesgos, verificación) y espera aprobación.
+4. Spikes desechables en `/spikes`.
 
-## Stack (propuesto; confirmar en Sprint 0)
+## Stack (confirmado en S0, D-006)
 - Tauri v2 + React + TypeScript + Tailwind + shadcn/ui.
 - SQLite + SQLCipher gestionado desde Rust (`rusqlite` con `bundled-sqlcipher`), migraciones SQL versionadas. Spike S0 lo valida; alternativa en `docs/01-PLAN.md`.
-- i18n: `de-CH` por defecto, `en`, luego `fr-CH`, `it-CH`. Alemán suizo: "ss" (nunca "ß"), formato CHF `1’234.50` (apóstrofo de `Intl`/CLDR, D-008), fechas `dd.mm.yyyy`.
+- i18n: `de-CH` por defecto, `en`, luego `fr-CH`, `it-CH`. Alemán suizo: "ss" (nunca "ß"), formato CHF `1'234.50` (salida de `Intl` de-CH, D-008), fechas `dd.mm.yyyy`.
 - Dinero en enteros (Rappen/céntimos) + moneda. Fechas UTC ISO-8601, mostrar Europe/Zurich. IDs UUIDv7.
 - Instalador NSIS por usuario (sin admin), updater firmado, licencias firmadas Ed25519 verificables offline.
 
@@ -37,7 +37,7 @@
 - Sin datos de salud ni categorías sensibles en el MVP.
 
 ## Licencias y propiedad intelectual
-- Dependencias permitidas: MIT, Apache-2.0, BSD, ISC, MPL-2.0 (con cuidado). Prohibidas sin aprobación de Jorge: GPL, AGPL, SSPL, "non-commercial".
+- Dependencias permitidas: MIT, Apache-2.0, BSD, ISC, MPL-2.0 (con cuidado), Unicode-3.0, Zlib, blessing, WTFPL (D-009). Política aplicada en `src-tauri/deny.toml` y `scripts/check-licenses.mjs`. Prohibidas sin aprobación de Jorge: GPL, AGPL, SSPL, "non-commercial".
 - Antes de añadir una dependencia: licencia, mantenimiento y OK de Jorge. Mantener `THIRD_PARTY_LICENSES` generado (cargo-about / license-checker).
 - No copiar código, textos, iconos, fuentes ni UI de otros productos. Marcas de terceros (WhatsApp, etc.) solo vía enlace estándar (`wa.me`), sin logos ajenos.
 

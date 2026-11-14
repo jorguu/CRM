@@ -1,0 +1,36 @@
+{
+  "status": {
+    "loading": "Wird geladen …"
+  },
+  "home": {
+    "heading": "Willkommen",
+    "subtitle": "Technisches Grundgerüst (Sprint 0)"
+  },
+  "info": {
+    "appVersion": "App-Version",
+    "schemaVersion": "Datenbankschema",
+    "database": "Datenbank",
+    "databaseEncrypted": "Verschlüsselt (SQLCipher)"
+  },
+  "examples": {
+    "amount": "Beispielbetrag",
+    "date": "Beispieldatum"
+  },
+  "language": {
+    "label": "Sprache",
+    "de-CH": "Deutsch",
+    "en": "English"
+  },
+  "errors": {
+    "title": "Es ist ein Fehler aufgetreten",
+    "code": "Fehlercode: {{code}}",
+    "database": "Die Datenbank konnte nicht geöffnet werden.",
+    "key": "Der Datenbankschlüssel konnte nicht gelesen werden oder passt nicht zur Datenbank.",
+    "key_missing": "Der Datenbankschlüssel fehlt. Ohne Wiederherstellungsschlüssel lassen sich die Daten nicht öffnen.",
+    "migration": "Die Datenbank konnte nicht aktualisiert werden. Es wurden keine Daten verändert.",
+    "schema_too_new": "Die Datenbank stammt aus einer neueren App-Version. Bitte aktualisieren Sie die App.",
+    "io": "Auf den Datenordner konnte nicht zugegriffen werden.",
+    "invalid_input": "Ungültige Eingabe.",
+    "unknown": "Unbekannter Fehler."
+  }
+}

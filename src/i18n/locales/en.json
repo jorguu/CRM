@@ -1,0 +1,36 @@
+{
+  "status": {
+    "loading": "Loading …"
+  },
+  "home": {
+    "heading": "Welcome",
+    "subtitle": "Technical skeleton (Sprint 0)"
+  },
+  "info": {
+    "appVersion": "App version",
+    "schemaVersion": "Database schema",
+    "database": "Database",
+    "databaseEncrypted": "Encrypted (SQLCipher)"
+  },
+  "examples": {
+    "amount": "Sample amount",
+    "date": "Sample date"
+  },
+  "language": {
+    "label": "Language",
+    "de-CH": "Deutsch",
+    "en": "English"
+  },
+  "errors": {
+    "title": "An error occurred",
+    "code": "Error code: {{code}}",
+    "database": "The database could not be opened.",
+    "key": "The database key could not be read or does not match the database.",
+    "key_missing": "The database key is missing. Without the recovery key the data cannot be opened.",
+    "migration": "The database could not be updated. No data was changed.",
+    "schema_too_new": "The database comes from a newer app version. Please update the app.",
+    "io": "The data folder could not be accessed.",
+    "invalid_input": "Invalid input.",
+    "unknown": "Unknown error."
+  }
+}

@@ -1,0 +1,43 @@
+# Política de dependencias Rust (CLAUDE.md).
+# Uso: cargo deny --manifest-path src-tauri/Cargo.toml check
+
+[graph]
+targets = ["x86_64-pc-windows-msvc"]
+
+[advisories]
+# Vulnerabilidades de RustSec siempre fallan. "Sin mantenimiento" solo falla
+# para nuestras dependencias directas (las transitivas de Tauri se vigilan aparte).
+unmaintained = "workspace"
+yanked = "deny"
+ignore = []
+
+[licenses]
+# Solo las permitidas en CLAUDE.md (D-009). Añadir otra requiere el OK de Jorge.
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "MPL-2.0",
+    "Unicode-3.0",
+    "Zlib",
+    "blessing",
+    "WTFPL",
+]
+confidence-threshold = 0.93
+# No avisar si alguna licencia permitida no aparece todavía.
+unused-allowed-license = "allow"
+
+[licenses.private]
+# Nuestro propio crate (publish = false) no lleva licencia OSS.
+ignore = true
+
+[bans]
+# Tauri trae varias versiones de algunas crates; se revisará en el hardening (S7).
+multiple-versions = "allow"
+wildcards = "deny"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"

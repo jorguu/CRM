@@ -69,7 +69,7 @@ Barra lateral: **Hoy** · Contactos · Empresas · Pipeline · Tareas · Ajustes
 | Sprint | Contenido | Horas aprox. |
 |--------|-----------|--------------|
 | M0 | Validación: 5–10 entrevistas con oficios/servicios (hay 1–2 contactos), competencia. Decisiones 🔴 ✅. En paralelo a S0; **S1 no arranca sin M0 completo** (D-002) | 10–20 |
-| S0 | Esqueleto Tauri, SQLCipher + migraciones (spike), i18n, CI, lint, estructura | 15–25 |
+| S0 ✅ | Esqueleto Tauri, SQLCipher + migraciones (spike), i18n, CI, lint, estructura (hecho 2026-11-14; ver `README.md`) | 15–25 |
 | S1 | Contactos/empresas CRUD, búsqueda, etiquetas, papelera | 20–30 |
 | S2 | Pipeline Kanban (drag & drop, totales) | 15–20 |
 | S3 | Tareas, recordatorios, notificaciones, vista "Hoy" | 15–25 |

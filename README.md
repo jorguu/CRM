@@ -24,6 +24,8 @@ Contexto, reglas y decisiones: [`CLAUDE.md`](CLAUDE.md) y [`docs/`](docs/).
 
 La primera compilación de Rust tarda unos 10 minutos (compila OpenSSL y SQLCipher).
 
+Si PowerShell dice que `npm.ps1` no se puede cargar ("running scripts is disabled"), usa `npm.cmd` en lugar de `npm` (p. ej. `npm.cmd run tauri dev`).
+
 ## Estructura
 
 - `src/` — frontend React. Textos en `src/i18n/locales/` (de-CH por defecto, en). Formatos suizos en `src/lib/format.ts`.

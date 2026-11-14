@@ -1,0 +1,34 @@
+# dependencias / build
+node_modules/
+dist/
+target/
+src-tauri/target/
+*.log
+
+# secretos y claves (NUNCA al repo)
+.env
+.env.*
+secrets/
+*.pfx
+*.p12
+*.key
+*.pem
+*.sqlcipher-key
+tauri-updater-private*
+
+# datos locales
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+backups/
+
+# sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# spikes desechables
+spikes/**/node_modules/
+spikes/**/target/

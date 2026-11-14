@@ -52,8 +52,12 @@ pub fn run() {
         .expect("error al arrancar la aplicación");
 }
 
-/// La BD vive en la carpeta de datos de la app (`%APPDATA%\<identifier>\`).
+/// La BD vive en la carpeta local de la app (`%LOCALAPPDATA%\<identifier>\`), no en
+/// Roaming: con perfiles itinerantes, Windows la sincronizaría con el servidor (D-011).
 fn open_database(app: &tauri::AppHandle) -> Result<Connection, AppError> {
-    let data_dir = app.path().app_data_dir().map_err(|_| AppError::DataDir)?;
+    let data_dir = app
+        .path()
+        .app_local_data_dir()
+        .map_err(|_| AppError::DataDir)?;
     db::open_and_migrate(&data_dir, db::migrations::MIGRATIONS)
 }

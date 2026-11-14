@@ -25,7 +25,7 @@
 EULA/licencia · AGB · Datenschutzerklärung (web + app) · Impressum · política de reembolso · AVV para soporte remoto · lista de subencargados · plantillas para el cliente (registro de tratamientos, plan de incidentes, texto informativo a sus clientes). Claude Code puede generar borradores en el Sprint 7; abogado revisa.
 
 ## 4. "Base de datos": qué es y qué no hay que montar
-- **No hay servidor de BD.** Cada cliente tiene un fichero SQLite cifrado en su PC (`%APPDATA%\<App>\data.db`). Cero coste de hosting por cliente, cero tus responsabilidades sobre sus datos.
+- **No hay servidor de BD.** Cada cliente tiene un fichero SQLite cifrado en su PC (`%LOCALAPPDATA%\<App>\data.db`). Cero coste de hosting por cliente, cero tus responsabilidades sobre sus datos.
 - Cosas a diseñar: esquema + **migraciones** (cada versión sabe actualizar la BD anterior, con backup previo), **backups** (cifrados, carpeta elegida, rotación), **restauración** (probada), **clave** (dónde se guarda, cómo se recupera).
 - Único "servidor" tuyo: **licencias y actualizaciones** (+ web y pagos). Datos mínimos: email del comprador, clave, hash de equipo, versión. Opciones: servicio de licencias (Keygen.sh o el del proveedor de pagos) + fichero estático de updates (`latest.json` + instalador firmado) en CDN/hosting suizo/UE.
 

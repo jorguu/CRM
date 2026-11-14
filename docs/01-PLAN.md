@@ -34,7 +34,7 @@ CRM de escritorio, simple, offline, con datos en el PC del comercio, pensado par
 
 ## 4. Arquitectura
 ```
-[ WebView (React/TS) ]  ←IPC tipado→  [ Núcleo Rust ]  →  SQLCipher (.db en %APPDATA%\<App>\)
+[ WebView (React/TS) ]  ←IPC tipado→  [ Núcleo Rust ]  →  SQLCipher (.db en %LOCALAPPDATA%\<App>\)
                                           │               Adjuntos (carpeta de app / elegida)
                                           ├ Backups cifrados → carpeta elegida por usuario
                                           ├ Notificaciones nativas (recordatorios)

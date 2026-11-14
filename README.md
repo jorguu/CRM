@@ -34,7 +34,7 @@ La primera compilación de Rust tarda unos 10 minutos (compila OpenSSL y SQLCiph
 
 ## Datos locales
 
-- Base de datos cifrada: `%APPDATA%\ch.kmucrm.desktop\data.db`.
+- Base de datos cifrada: `%LOCALAPPDATA%\ch.kmucrm.desktop\data.db` (Local, no Roaming: D-011).
 - Clave: `db.key` en la misma carpeta, protegida con DPAPI (solo la puede leer tu usuario de Windows). **Si se borra `db.key`, la BD queda ilegible.** La clave de recuperación exportable llega en S5.
 - Antes de cada migración se guarda una copia en `backups\pre-migration-v<N>-<fecha>.db`.
 
